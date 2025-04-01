@@ -6,18 +6,19 @@ import get_additional_features as gef
 
 # Streamlit UI
 def main():
+
     # Set page config
     st.set_page_config(page_title="Flight Price Predictor", page_icon="✈️", layout="centered", initial_sidebar_state="collapsed")
 
     # Load the trained model
-    model = joblib.load("../models/lgb_model.pkl")
+    model = joblib.load("models/lgb_model.pkl")
 
     # load the encoded df
-    with open("../data/processed/df_encoded.json", "r") as enc_file:
+    with open("data/processed/df_encoded.json", "r") as enc_file:
         df_encodings = json.load(enc_file)
         
     # Load Styles
-    with open("../styles/style.css", "r") as css_file:
+    with open("styles/style.css", "r") as css_file:
         css = css_file.read()
         
     st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
