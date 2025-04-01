@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Customize the title */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #2E86C1;
+}
+
+/* Style buttons */
+.stButton>button {
+    background-color: #d81a1a;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Customize inputs */
+.stTextInput>div>div>input,
+.stSelectbox>div>div>select {
+    border: 2px solid #1e8085;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.stNumberInput>div>div>input {
+    border: 2px solid #5dbeff;
+    border-radius: 5px;
+}
+
+/* Style success message */
+.stSuccess {
+    font-size: 20px;
+    color: green;
+}
