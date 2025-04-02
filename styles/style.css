@@ -1,38 +1,144 @@
-/* styles.css */
+/* Main container background */
 
-/* Customize the title */
-.title {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    color: #2E86C1;
+
+[data-testid="stMain"] {
+    background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-/* Style buttons */
-.stButton>button {
-    background-color: #d81a1a;
-    color: white;
+.element-container, 
+.stMarkdown, 
+.stText,
+.stSelectbox,
+div[data-baseweb="select"] span,
+div[data-testid="stMarkdownContainer"] p,
+div[data-testid="stExpander"],
+.streamlit-expanderHeader,
+[data-testid="stWidgetLabel"] {
+    color: #000000 !important;
+}
+
+/* Header styling - more specific selectors */
+[data-testid="stHeaderActionElements"],
+[data-testid="stHeader"] button,
+[data-testid="stHeader"] div,
+[data-testid="stHeader"] span,
+[data-testid="stToolbar"] button,
+[data-testid="baseButton-headerNoPadding"],
+div.stActionButton,
+.st-emotion-cache-1q1n0ol,
+.st-emotion-cache-1egp75f {
+    color: #000000 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: none;
+}
+
+/* Additional header elements that might need styling */
+[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+[data-testid="stHeader"] button svg {
+    fill: #000000 !important;
+}
+
+/* Style for all containers to make them more solid and elegant */
+[data-testid="stContainer"] {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 2rem;
     border-radius: 10px;
-    font-size: 16px;
-    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 1rem 0;
 }
 
-/* Customize inputs */
-.stTextInput>div>div>input,
-.stSelectbox>div>div>select {
-    border: 2px solid #1e8085;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
+.css-10trblm,
+h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.stNumberInput>div>div>input {
-    border: 2px solid #5dbeff;
-    border-radius: 5px;
+/* Custom styling for the predict button */
+.stButton > button {
+    background-color: #0066cc !important;
+    color: white !important;
+    padding: 0.75rem 2.5rem !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    border: none !important;
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 24px;
+    padding-left: 50px !important;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.2);
 }
 
-/* Style success message */
-.stSuccess {
-    font-size: 20px;
-    color: green;
+/* Ensure button text stays white */
+.stButton > button,
+.stButton > button span,
+.stButton > button p,
+.stButton > button div {
+    color: white !important;
+}
+
+.stButton > button:hover {
+    background-color: #003366 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* Input text color and styling */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stSelectbox > div > div > div {
+    color: white !important;
+    font-weight: 500;
+}
+
+/* Success message styling with better visibility */
+div[data-testid="stSuccessAlert"] {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-left: 4px solid #00cc00;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 102, 0, 0.1);
+}
+
+/* Success message text */
+div[data-testid="stSuccessAlert"] div,
+div[data-testid="stSuccessAlert"] p,
+div[data-testid="stSuccessAlert"] span {
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+/* Ensure all text inside success alert is black */
+div[data-testid="stSuccessAlert"] div,
+div[data-testid="stSuccessAlert"] p,
+div[data-testid="stSuccessAlert"] span {
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    [data-testid="stContainer"] {
+        padding: 1rem;
+    }
+    
+    .stButton > button {
+        width: 100% !important;
+        color: white !important;
+    }
+    
+    .block-container::before {
+        width: 80px;
+        height: 80px;
+    }
 }

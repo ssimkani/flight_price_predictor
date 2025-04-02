@@ -128,7 +128,6 @@ def main():
                 # Create a DataFrame for the price data
                 price_df = pd.DataFrame(price_data, columns=["Date", "Price"])
 
-
                 # Convert Date column to numerical values for smoothing
                 price_df["Date_ordinal"] = price_df["Date"].map(lambda x: x.toordinal())
 
