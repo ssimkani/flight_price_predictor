@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Flight Price Predictor is an application designed to analyze historical flight data and predict future ticket prices using a machine learning algorithm.
+The Flight Price Predictor is an application (website) designed to analyze historical flight data and predict future ticket prices using a machine learning algorithm.
 
 ## Purpose
 
@@ -20,3 +20,7 @@ https://pythongeeks.org/wp-content/uploads/2022/03/working-of-gradient-boosting-
 - Exploratory Data Analysis
 - How to work with machine learning libraries
 - How to use Streamlit and Python virtual environments
+
+## Website Link
+
+https://flightprice-predictor.streamlit.app/
