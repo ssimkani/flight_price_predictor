@@ -6,7 +6,6 @@ import datetime
 import pandas as pd
 import joblib
 import json
-import get_additional_features as gef
 
 # Streamlit UI
 def main():
@@ -53,6 +52,8 @@ def main():
 
             # Predict Price Button
             if st.button("Predict Price"):
+                import get_additional_features as gef
+
                 # Extract additional features from the date
                 quarter = (date.month - 1) // 3 + 1
                 year = date.year
